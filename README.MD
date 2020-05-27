@@ -1,7 +1,7 @@
 # Organellar_genome_assembly
 Based on a slurm HPC, may need to change the scripts to submit the job on different servers.
 ## 1. Identify chloroplast reads
-### 1.1 Clean raw data with Trimmomatic
+### 1.1 Clean raw data with [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 ```bash
 perl trimmomatic.pl sample.name
 ```
