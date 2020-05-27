@@ -15,3 +15,8 @@ sh get_mapped_PEfq.sh sample.name ref_cp.fasta
 ```bash
 sh get_subsample.sh sample.name 1000000
 ```
+## 2. Extract common chloroplast genes
+### 2.1 De novo assembly chloroplast genome with [Spades](https://github.com/ablab/spades)
+```bash
+sh run_spades.sh sample.name
+```
