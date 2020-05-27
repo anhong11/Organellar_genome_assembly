@@ -3,7 +3,7 @@ Based on a slurm HPC, may need to change the scripts to submit the job on differ
 ## 1. Identify chloroplast reads
 ### 1.1 Clean raw data with [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 ```bash
-perl trimmomatic.pl sample.name
+sh trimmomatic.sh sample.name
 ```
 ### 1.2 Extract mapped paired-end clean reads
 need [bwa](https://github.com/lh3/bwa), [samtools](https://github.com/samtools/samtools), and [bedtools](https://github.com/arq5x/bedtools2)
