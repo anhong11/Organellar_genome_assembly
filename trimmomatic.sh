@@ -1,9 +1,5 @@
-open IN, "$ARGV[0]"; 
-
-while (<IN>){
-  chomp;
-  $fq=$_;
-
+while read line
+do
   $fq_1=$fq."_raw_R1.fastq.gz"; # May need to modify here to adjust your own data
   $fq_2=$fq."_raw_R2.fastq.gz"; # May need to modify here to adjust your own data
 
