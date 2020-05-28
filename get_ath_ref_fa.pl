@@ -6,8 +6,8 @@
 
 
 open IN, "$ARGV[1]";
-open OUT, ">ath_comGene.fa";
-open OUT2, ">ath_conj.fa";
+open OUT, ">Ath_comGene.fa";
+open OUT2, ">Ath_conj.fa";
 
 use Bio::SeqIO;
 my $in = Bio::SeqIO->new(-file => "$ARGV[0]" ,-format => 'fasta');
