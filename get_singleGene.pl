@@ -31,5 +31,5 @@ while (<IN>){
 	}
 	close SEQ;
 	close OUT;
-	print "---------------$gene done! -----------------";
+	print "---------------$gene done! -----------------\n";
 }
