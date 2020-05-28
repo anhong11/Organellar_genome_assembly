@@ -38,7 +38,7 @@ sbatch -n 8 --mem 64G -t 1:00:00 -p Lewis,BioCompute --wrap="perl get_ath_ref_fa
 mv ath_co* all_matched_uniq_seq; cd all_matched_uniq_seq
 ls *comGene.fa > comGene_fa.name
 sbatch -n 8 --mem 64G -t 1:00:00 -p Lewis,BioCompute --wrap="perl ../get_singleGene.pl ../comm_ath_gene.name comGene_fa.name"
-
+```
 ## 3. Make concatenate phylogeny
 ### 3.1 Align each gene with [Mafft](https://mafft.cbrc.jp/alignment/software/), and clean and concatenate sequence with [Phyutility](https://github.com/blackrim/phyutility)
 ```bash
