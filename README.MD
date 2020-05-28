@@ -20,3 +20,16 @@ sh get_subsample.sh sample.name 1000000
 ```bash
 sh run_spades.sh sample.name
 ```
+### 2.2 Find common chloroplast genes
+```bash
+#get Ath chloroplast gene length
+perl get_gene_len.pl Ath_cp_gene.fa Ath_cp_len.txt
+
+#get matched annotated assembly genes for each sample
+mkdir matched_annot
+sh get_matched_annot.sh sample.name 
+cd matched_annot
+sh ../get_annot_num.sh ../sample.name > annotated_num.txt	#then decide if you need to discard some bad assembled samples
+cat *.annot | awk '{print $1}' | sort | uniq -c | sort -nr > annot_ath_gene.stat	#only keep the genes annotated the same number with your sample number, then copy these gene names from annot_ath_gene.stat to "comm_ath_gene.name"
+
+#
