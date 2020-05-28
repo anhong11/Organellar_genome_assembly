@@ -1,4 +1,5 @@
 # Organellar_genome_assembly
+The method used in [B. napus origin and diversification paper](https://www.nature.com/articles/s41467-019-10757-1)
 Based on a slurm HPC, may need to change the scripts to submit the job on different servers.
 ## 1. Identify chloroplast reads
 ### 1.1 Clean raw data with [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
