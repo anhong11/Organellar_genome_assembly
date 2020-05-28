@@ -32,4 +32,5 @@ cd matched_annot
 sh ../get_annot_num.sh ../sample.name > annotated_num.txt	#then decide if you need to discard some bad assembled samples
 cat *.annot | awk '{print $1}' | sort | uniq -c | sort -nr > annot_ath_gene.stat	#only keep the genes annotated the same number with your sample number, then copy these gene names from annot_ath_gene.stat to "comm_ath_gene.name"
 
-#
+#get concatnated and co sequences
+sbatch -n 8 --mem 64G -t 1:00:00 -p Lewis,BioCompute --wrap="sh get_comm_genes.sh sample.name"
