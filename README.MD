@@ -50,6 +50,8 @@ sbatch -n 8 --mem 64G -t 2:00:00 --wrap="phyutility -concat -out ./conc_cln-aln.
 ### 3.2 Make concatenate phylogeny with [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/index.html)
 ```bash
 perl refmt_nexus.pl conc_cln-aln.nexus conc_cln-aln.model conc_cln-aln.phylip
+sed -i 's/=\([A-z]\)/\n\1/g' conc_cln-aln.model
+sed -i 's/^/DNA,/g' conc_cln-aln.model
 sbatch -n 24 --mem 200G -t 2-00:00 -p BioCompute --wrap="raxml -f a -x 12345 -p 12345 -# 100 -m GTRGAMMA -s conc_cln-aln.phylip -q conc_cln-aln.model -n conc_cln-aln -o Ath -T 24"
 ```
 
